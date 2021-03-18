@@ -383,7 +383,8 @@ class Evaluator:
             for level in LEVELS
         }
 
-    def eval_hardness(self, sql):
+    @classmethod
+    def eval_hardness(cls, sql):
         count_comp1_ = count_component1(sql)
         count_comp2_ = count_component2(sql)
         count_others_ = count_others(sql)

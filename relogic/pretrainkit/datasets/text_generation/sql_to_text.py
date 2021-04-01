@@ -4,8 +4,8 @@ from tqdm import tqdm
 import json
 
 from dataclasses import dataclass
-from transformers.tokenization_bart import BartTokenizer
-from transformers.tokenization_roberta import RobertaTokenizer
+from transformers import BartTokenizer
+from transformers import RobertaTokenizer
 from transformers.tokenization_utils import PreTrainedTokenizer
 from relogic.pretrainkit.datasets.utils import pad_and_tensorize_sequence
 

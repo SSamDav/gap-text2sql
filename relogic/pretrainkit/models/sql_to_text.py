@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
-from transformers.modeling_bart import BartForConditionalGeneration
-from relogic.logickit.dataflow.semtransparse.grammar.keywords import SKETCH_KEYWORDS, KEYWORDS
+from transformers import BartForConditionalGeneration
+#from relogic.logickit.dataflow.semtransparse.grammar.keywords import SKETCH_KEYWORDS, KEYWORDS
 import logging
 import os
 

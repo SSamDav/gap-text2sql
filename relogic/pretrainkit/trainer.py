@@ -23,7 +23,9 @@ from transformers.data.data_collator import DataCollator, default_data_collator
 from transformers.file_utils import is_apex_available, is_torch_tpu_available
 from transformers.modeling_utils import PreTrainedModel
 from transformers.optimization import AdamW, get_linear_schedule_with_warmup
-from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR, EvalPrediction, PredictionOutput, TrainOutput, is_wandb_available
+from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR, EvalPrediction, PredictionOutput, TrainOutput
+
+def is_wandb_available(): return False
 
 from relogic.pretrainkit.training_args import TrainingArguments
 from relogic.pretrainkit.trainer_utils import EvalPredictionWithSize, PredictionOutputWithSize

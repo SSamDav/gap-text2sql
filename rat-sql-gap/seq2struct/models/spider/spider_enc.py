@@ -1352,6 +1352,7 @@ class SpiderEncoderBart(torch.nn.Module):
             batch_id_to_retrieve_table_2 = []
         long_seq_set = set()
         batch_id_map = {}  # some long examples are not included
+        #from ipdb import set_trace; set_trace()
         for batch_idx, desc in enumerate(descs):
             qs = self.pad_single_sentence_for_bert(desc['question'], cls=True)
             if self.use_column_type:
@@ -1541,6 +1542,7 @@ class SpiderEncoderBart(torch.nn.Module):
 
     def pad_sequence_for_bert_batch(self, tokens_lists):
         pad_id = self.tokenizer.pad_token_id
+        #from ipdb import set_trace; set_trace()
         max_len = max([len(it) for it in tokens_lists])
         assert max_len <= 512
         toks_ids = []
